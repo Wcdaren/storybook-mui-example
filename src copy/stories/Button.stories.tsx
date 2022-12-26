@@ -12,23 +12,15 @@ export default {
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Playground = Template.bind({});
-// Playground.args = {
-//   label: "Click me!",
-// };
+Playground.args = {
+  label: "Click me!",
+};
 
 export const Variants: ComponentStory<typeof Button> = () => (
   <Stack spacing={2} maxWidth={300}>
     {/* <Button variant="text" label="Text Button" /> */}
     {/* <Button variant="contained" label="Contained Button" /> */}
-    <Button
-      color="danger"
-      onClick={() => {
-        console.log(`==============>11`);
-        console.log(11);
-      }}
-    >
-      123123
-    </Button>
+    <Button variant="outlined" label="Outlined Button" />
   </Stack>
 );
 
