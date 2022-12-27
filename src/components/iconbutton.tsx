@@ -1,22 +1,23 @@
 import React from "react";
 
-import MuiButton, { ButtonProps as MuiButtonProps } from "@mui/joy/Button";
+import IconButton, { IconButtonProps } from "@mui/joy/IconButton";
 // Only include variant, size, color from MuiButtonProps
 // type ButtonBaseProps = Pick<MuiButtonProps, "variant" | "size" | "color">;
-type ButtonBaseProps = MuiButtonProps;
 
 // Include everything from MuiButtonProps except disableRipple
 // type ButtonBaseProps = Omit<MuiButtonProps, "disableRipple">;
 
-export interface ButtonProps extends ButtonBaseProps {
+export interface CIconButtonProps extends IconButtonProps {
   // label: string;
 }
 
-export const CButton = ({ ...rest }: ButtonProps) => (
-  <MuiButton {...rest}>{/* {label} */}</MuiButton>
+export const CIconButton = ({ ...rest }: CIconButtonProps) => (
+  <IconButton variant="solid" {...rest}>
+    {/* {label} */}
+  </IconButton>
 );
 
-CButton.defaultProps = {
+CIconButton.defaultProps = {
   // variant: "contained",
   // size: "medium",
   // color: "primary",
